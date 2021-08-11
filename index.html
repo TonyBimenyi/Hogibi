@@ -724,13 +724,11 @@
             "title": "Mail from HOGI.BI",
             "subject": "VISITOR MESSAGE",
             "body": message,
-            "to": "jonkur96@gmail.com"
+            "to": ["manag.thierry@hogi.bi","primikiza@gmail.com","sangweno@gmail.com"]
         }
-        axios.post('https://hogi.bi/mail', body)
+        axios.post('https://hogi.bi/mail_api/email/', body)
         .then((response) => {
-            if(response.data == 1){
-                alert("SUCCESS")
-            }
+            alert("SUCCESS")
         }).catch((error) => {
           console.error(error);
         }) 
