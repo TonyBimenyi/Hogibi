@@ -659,7 +659,7 @@
 				  </div>
 				  <div class="form-group">
 				    <label for="txt_name">Name</label>
-				    <input type="password" class="form-control" id="txt_name">
+				    <input class="form-control" id="txt_name">
 				  </div>
 				  <div class="form-group">
 				    <label for="txt_message">Message</label>
@@ -723,8 +723,9 @@
 <script src="assets/theme/js/script.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   
-<script src="https://cdn.jsdelivr.net/npm/typeit@7.0.4/dist/typeit.min.js"></script><script type="text/javascript">
-	
+<script src="https://cdn.jsdelivr.net/npm/typeit@7.0.4/dist/typeit.min.js"></script>
+
+<script type="text/javascript">	
 	new TypeIt(".typeit", {
 
 		  strings: 
@@ -749,7 +750,12 @@
             "title": "Mail from HOGI.BI",
             "subject": "VISITOR MESSAGE",
             "body": message,
-            "to": ["manag.thierry@hogi.bi","primikiza@gmail.com","sangweno@gmail.com"]
+            "to": [
+                "manag.thierry@hogi.bi",
+                "primikiza@gmail.com",
+                "sangweno@gmail.com",
+                "architect@hogi.bi"
+            ]
         }
         axios.post('https://hogi.bi/mail_api/email/', body)
         .then((response) => {
