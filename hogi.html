@@ -6,23 +6,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script type="text/javascript">
+        $(window).on('scroll',function(){
+            if($(window).scrollTop()){
+                $('nav').addClass('black');
+            }else{
+                $('nav').removeClass('black');
+            }
+        });
+
+        $(document).ready(function(){
+            $('.icon').click(function(){
+                $('.menu').toggleClass('show');
+            });
+        });
+    </script>
     <title>HOGI</title>
 </head>
 <body>
     <div class="container">
-        <div class="header">
-            <div class="navbar">
-                <div class="logo">
-                 <a href="accueil.html"><img  src="./image/logo.png" alt=""></a>
-                </div>
-                <div class="menu">
-                    <p><i class="fas fa-code"></i>Valeurs</p>
-                    <p><i class="fas fa-user-friends"></i>Equipe</p>
-                    <p><i class="far fa-envelope"></i>Portfolio</p>
-                    <p><i class="fas fa-phone"></i>Contact</p>
+        <nav>
+            <div class="header">
+                <div class="navbar">
+                    <div class="logo">
+                    <a href="accueil.html"><img  src="./image/logo1.png" alt=""></a>
+                    </div>
+                    <div class="menu">
+                        <p><i class="fas fa-code"></i>Valeurs</p>
+                        <p><i class="fas fa-user-friends"></i>Equipe</p>
+                        <p><i class="far fa-envelope"></i>Portfolio</p>
+                        <p><i class="fas fa-phone"></i>Contact</p>
+                    </div>
+                    <div class="icon">
+                        <i class="fas fa-bars"></i>
+                    </div>
                 </div>
             </div>
-        </div>
+      </nav>
 
         <div class="title_part">
             <div class="home">
@@ -32,7 +53,14 @@
                         <h1>HOGI</h1>
                     </div>
                     <div class="paragraph">
-                        <p>We transform <span id="orange">problems</span> into <span id="yellow">solutions.</span></p>
+                        <div class="wrapper">
+                        <p>We transform </p>
+                        <ul class="dynamic-texts">
+                            <li><span id="text"><span id="text1">Problems</span> into <span id="text2">solutions.</span></span></li>
+                            <li><span id="text"><span id="text1">Issues</span> into <span id="text2">opportunities.</span></span></li>
+                            <li><span id="text"><span id="text1">Ideas</span> into <span id="text2">reality.</span></span></li> 
+                        </ul>
+                    </div>
                     </div>
                     <div class="button-contact">
                        <a href=""><button>Get in touch<i class="far fa-envelope"></i></button></a>
@@ -380,7 +408,7 @@
                 </div>
                 <div class="part2">
                     <div class="form">
-                        <label for="">Addresse e-mail:</label><br>
+                        <label  for="">Addresse e-mail:</label><br>
                         <input type="email" placeholder=""><br>
                         <p>We'll never share your email with anyone else.</p><br>
                         <label for="">Nom: </label><br>
